@@ -80,5 +80,10 @@ public class ReservationService {
     private Reservation makeReservation(Long customerId, Long screeningId, Integer audienceCount, Long amount) {
         return new Reservation(customerId, screeningId, audienceCount, amount * audienceCount);
     }
+
+    public ReservationService(DiscountConditionDAO discountConditionDAO, ReservationDAO reservationDAO) {
+        this.discountConditionDAO = discountConditionDAO;
+        this.reservationDAO = reservationDAO;
+    }
 }
 
