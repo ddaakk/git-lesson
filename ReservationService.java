@@ -81,5 +81,10 @@ public class ReservationService {
         Sangwoo
         return new Reservation(customerId, screeningId, audienceCount, amount * audienceCount);
     }
+
+    public ReservationService(DiscountConditionDAO discountConditionDAO, ReservationDAO reservationDAO) {
+        this.discountConditionDAO = discountConditionDAO;
+        this.reservationDAO = reservationDAO;
+    }
 }
 
