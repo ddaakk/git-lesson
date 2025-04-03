@@ -78,6 +78,7 @@ public class ReservationService {
     }
 
     private Reservation makeReservation(Long customerId, Long screeningId, Integer audienceCount, Long amount) {
+        Sangwoo
         return new Reservation(customerId, screeningId, audienceCount, amount * audienceCount);
     }
 }
